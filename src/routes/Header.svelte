@@ -52,9 +52,8 @@
 
 <style lang="scss">
 	header {
-		font-family: Assistant;
 		font-weight: bold;
-		letter-spacing: 0.1rem;
+		letter-spacing: 0.05rem;
 		position: fixed;
 		right: 4rem;
 		font-size: 18px;
@@ -190,6 +189,7 @@
 		flex-direction: row;
 		justify-content: center;
 		transition: inherit;
+		height: 5.5rem;
 	}
 
 	ul {
@@ -226,7 +226,6 @@
 					cursor: pointer;
 					border: none;
 					position: relative;
-					font-family: Assistant;
 					font-weight: bold;
 					box-shadow: 0 12px 24px rgba(63, 101, 97, 0.3);
 				}

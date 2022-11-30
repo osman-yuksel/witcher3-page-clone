@@ -1,8 +1,13 @@
 <script lang="ts">
 	// @ts-ignore
 	import Header from './Header.svelte';
+	import Compass from './Compass.svelte';
 	import { onMount } from 'svelte';
 
+	//Slider Pages
+	import SliderPage1 from "./sliders/SliderPage1.svelte";
+
+	//Slider logic
 	let pageCount = 0;
 	let isScroolable = true;
 	let viewport_height = 0;
@@ -19,11 +24,6 @@
 		viewport_height = window.innerHeight;
 	});
 
-	function resizeListener() {
-		viewport_height = window.innerHeight;
-		scrollableYPosition.set(viewport_height * pageCount);
-	}
-
 	function scrollHandler(event: any) {
 		if (isScroolable) {
 			if (event.deltaY > 0) pageCount = pageCount === 6 ? 6 : ++pageCount;
@@ -37,24 +37,35 @@
 			}, 500);
 		}
 	}
+
+	function resizeListener() {
+		viewport_height = window.innerHeight;
+		scrollableYPosition.set(viewport_height * pageCount);
+	}
 </script>
 
 <svelte:window on:resize={resizeListener} />
 
 <Header />
-<div
+<Compass />
+
+
+<main
 	class="container"
 	on:wheel={scrollHandler}
 	style="--scrollableYPosition: {$scrollableYPosition}"
 >
-	<div class="dummy a"><p>{$scrollableYPosition}</p></div>
-	<div class="dummy b"><p>{$scrollableYPosition}</p></div>
-	<div class="dummy c"><p>{$scrollableYPosition}</p></div>
-	<div class="dummy d"><p>{$scrollableYPosition}</p></div>
-	<div class="dummy e"><p>{$scrollableYPosition}</p></div>
-	<div class="dummy f"><p>{$scrollableYPosition}</p></div>
-	<div class="dummy g"><p>{$scrollableYPosition}</p></div>
-</div>
+	<div class="slider-page-container a">
+		<span>{$scrollableYPosition}</span>
+		<SliderPage1 />
+	</div>
+	<div class="slider-page-container b"><span>{$scrollableYPosition}</span></div>
+	<div class="slider-page-container c"><span>{$scrollableYPosition}</span></div>
+	<div class="slider-page-container d"><span>{$scrollableYPosition}</span></div>
+	<div class="slider-page-container e"><span>{$scrollableYPosition}</span></div>
+	<div class="slider-page-container f"><span>{$scrollableYPosition}</span></div>
+	<div class="slider-page-container g"><span>{$scrollableYPosition}</span></div>
+</main>
 
 <style lang="scss">
 	:global(body) {
@@ -76,17 +87,17 @@
 		box-sizing: content-box;
 	}
 
-	.dummy {
+	.slider-page-container {
 		margin: 0;
 		height: 100vh;
 		width: 100%;
-
-		p {
-			margin: 0;
+		
+		span {
+			position: absolute;
+			z-index: 10;
 		}
 	}
 
-	.a,
 	.c,
 	.e,
 	.g {
