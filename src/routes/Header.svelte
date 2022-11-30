@@ -25,7 +25,7 @@
 							>THRONEBREAKER: THE WITCHER TALES</a
 						>
 					</li>
-					<li><a href="https://playgwent.com/">GWENT®: The Witcher Card Game</a></li>
+					<li><a href="https://playgwent.com/">GWENT<sup>®</sup>: The Witcher Card Game</a></li>
 					<li><a href="http://thewitcher.com/witcher3">THE WITCHER 3: WILD HUNT</a></li>
 					<li><a href="http://thewitcher.com/witcher2">THE WITCHER 2: ASSASSINS OF KINGS</a></li>
 					<li><a href="http://thewitcher.com/witcher1">THE WITCHER: ENHANCED EDITION</a></li>
@@ -52,11 +52,10 @@
 
 <style lang="scss">
 	header {
-		font-weight: bold;
-		letter-spacing: 0.05rem;
+		font-weight: 600;
+		letter-spacing: 0.22rem;
 		position: fixed;
 		right: 4rem;
-		font-size: 18px;
 		z-index: 100;
 		transition: color 0.15s;
 		user-select: none;
@@ -69,10 +68,10 @@
 		margin: 0;
 		flex-direction: column;
 		align-items: flex-start;
-		padding-top: 16px;
-		padding-right: 32px;
-		padding-bottom: 16px;
-		padding-left: 32px;
+		padding-top: 12px;
+		padding-right: 20px;
+		padding-bottom: 12px;
+		padding-left: 20px;
 		width: 100vw;
 		max-width: 430px;
 		background: hsla(0, 0%, 100%, 0.7);
@@ -104,8 +103,9 @@
 		opacity: 0;
 		pointer-events: none;
 		transition: opacity 0.2s, transform 0.2s;
-		font-weight: normal;
-		letter-spacing: -1px;
+		font-weight: 500;
+		font-size: 18px;
+		letter-spacing: 0px;
 		@supports not ((backdrop-filter: blur(32px)) and (-webkit-backdrop-filter: blur(32px))) {
 			background: hsla(0, 0%, 100%, 0.8);
 		}
@@ -113,8 +113,8 @@
 			backdrop-filter: blur(32px);
 		}
 		li {
-			margin-top: 12px;
-			margin-bottom: 12px;
+			margin-top: 10px;
+			margin-bottom: 10px;
 		}
 	}
 
@@ -209,8 +209,11 @@
 				text-decoration: none;
 
 				button {
+					font-family: inherit;
+					font-weight: 600;
+					letter-spacing: 0;
 					color: rgb(230, 0, 0);
-					font-size: 18px;
+					font-size: 16px;
 					min-width: 108px;
 					height: 32px;
 					margin-left: 14px;
@@ -226,7 +229,6 @@
 					cursor: pointer;
 					border: none;
 					position: relative;
-					font-weight: bold;
 					box-shadow: 0 12px 24px rgba(63, 101, 97, 0.3);
 				}
 

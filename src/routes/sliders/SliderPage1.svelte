@@ -75,11 +75,12 @@
 
 		h1 {
 			margin: 0;
-			font-size: 44px;
+			font-size: 38px;
 			line-height: 53px;
 			text-transform: none;
 			text-align: center;
-			letter-spacing: normal;
+			letter-spacing: 0.00001rem;
+			word-spacing: 0.00001rem;
 			color: #fff;
 			filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.85)) drop-shadow(0 6px 28px rgba(0, 0, 0, 0.7));
 		}
@@ -95,13 +96,15 @@
 			font-weight: 700;
 			text-transform: uppercase;
 			margin: 0;
-			font-size: 44px;
+			font-size: 38px;
 			line-height: 53px;
-			text-transform: none;
 			text-align: center;
 			letter-spacing: normal;
 			color: #fff;
 			filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.85)) drop-shadow(0 6px 28px rgba(0, 0, 0, 0.7));
+			sup {
+				text-transform: none;
+			}
 		}
 
 		.buttons {
@@ -115,6 +118,7 @@
 				background-color: transparent;
 
 				.button-buy {
+					font-family: inherit;
 					color: #e60000;
 					background-image: url('https://www.thewitcher.com/build/images/middle-33abf525..png');
 					position: relative;
@@ -132,7 +136,7 @@
 					margin-left: 23px;
 					text-transform: uppercase;
 					font-weight: 700;
-					font-size: 24px;
+					font-size: 22px;
 					line-height: 1.5;
 					background-repeat: repeat-x;
 					display: flex;
@@ -168,6 +172,7 @@
 				}
 
 				.button-trailer {
+					font-family: inherit;
 					color: #f0fff0;
 					background-image: url('https://www.thewitcher.com/build/images/middle-c820a1f0..png');
 					position: relative;
@@ -185,7 +190,7 @@
 					margin-left: 23px;
 					text-transform: uppercase;
 					font-weight: 700;
-					font-size: 24px;
+					font-size: 22px;
 					line-height: 1.5;
 					background-repeat: repeat-x;
 					display: flex;
@@ -229,7 +234,7 @@
 		bottom: 0;
 		transform: translateX(-50%);
 		left: 50%;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 24px;
 		color: #fff;
 		opacity: 0.7;

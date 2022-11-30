@@ -16,7 +16,7 @@
 	import { cubicOut } from 'svelte/easing';
 
 	const scrollableYPosition = tweened(0, {
-		duration: 300,
+		duration: 400,
 		easing: cubicOut
 	});
 
