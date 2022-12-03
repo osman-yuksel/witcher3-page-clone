@@ -1,13 +1,23 @@
 <script lang="ts">
 	let dropdownActive = false;
 	$: dropdownClass = dropdownActive ? 'dropdown-menu-active' : '';
+	export let pageCount: number;
+	const pages = [
+		'navbar-black',
+		'navbar-white',
+		'navbar-white',
+		'navbar-white',
+		'navbar-white',
+		'navbar-white',
+		'navbar-white'
+	];
 
 	function ToggleDropdown() {
 		dropdownActive = !dropdownActive;
 	}
 </script>
 
-<header class="navbar-black">
+<header class={pages[pageCount]}>
 	<nav>
 		<ul>
 			<li
@@ -121,7 +131,7 @@
 	.dropdown-container {
 		position: relative;
 
-		span{
+		span {
 			margin-right: 2px;
 		}
 	}
@@ -149,6 +159,7 @@
 
 	.dropdown-menu-active {
 		ul {
+			color: black !important;
 			opacity: 1;
 			pointer-events: all;
 			top: 30px;
@@ -157,30 +168,44 @@
 
 		span {
 			top: 2px;
-			border-bottom: 2px solid #000;
-			height: 21px;
+			height: 22px;
 		}
 	}
 
 	.dropdown-menu-active::before {
 		border-top: 0;
-		border-bottom: 4px solid #000;
 	}
 
 	.navbar-black {
 		color: black;
+		.dropdown-menu-active {
+			border-bottom: 2px solid #000;
+		}
+		.dropdown-menu-active::before {
+			border-bottom: 4px solid #000;
+		}
 		span {
-			transition: inherit;
 			&:hover {
 				color: #e60000;
-				cursor: pointer;
 			}
-			padding-inline-end: 12px;
 		}
 		a {
 			&:hover {
 				color: #e60000;
 			}
+		}
+	}
+
+	.navbar-white {
+		color: white;
+		.dropdown-menu-active {
+			border-bottom: 2px solid rgb(255, 255, 255);
+		}
+		.dropdown-menu-active::before {
+			border-bottom: 4px solid rgb(255, 255, 255);
+		}
+		.dropdown-container::before{
+			border-top-color: white;
 		}
 	}
 
@@ -203,6 +228,12 @@
 			list-style-type: none;
 			display: flex;
 			transition: inherit;
+
+			span {
+				padding-inline-end: 12px;
+				cursor: pointer;
+				transition: inherit;
+			}
 			a {
 				color: inherit;
 				transition: inherit;

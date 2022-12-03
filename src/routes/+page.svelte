@@ -1,11 +1,12 @@
 <script lang="ts">
 	// @ts-ignore
 	import Header from './Header.svelte';
-	import Compass from './Compass.svelte';
+	import Witcher3Logo from './Witcher3Logo.svelte';
 	import { onMount } from 'svelte';
 
 	//Slider Pages
-	import SliderPage1 from "./sliders/SliderPage1.svelte";
+	import SliderPage1 from './sliders/SliderPage1.svelte';
+	import SliderPage2 from './sliders/SliderPage2.svelte';
 
 	//Slider logic
 	let pageCount = 0;
@@ -46,20 +47,22 @@
 
 <svelte:window on:resize={resizeListener} />
 
-<Header />
-<Compass />
-
+<Header {pageCount} />
+<Witcher3Logo {pageCount} />
 
 <main
 	class="container"
 	on:wheel={scrollHandler}
 	style="--scrollableYPosition: {$scrollableYPosition}"
 >
-	<div class="slider-page-container a">
+	<div class="slider-page-container">
 		<span>{$scrollableYPosition}</span>
 		<SliderPage1 />
 	</div>
-	<div class="slider-page-container b"><span>{$scrollableYPosition}</span></div>
+	<div class="slider-page-container">
+		<span>{$scrollableYPosition}</span>
+		<SliderPage2 {pageCount}/>
+	</div>
 	<div class="slider-page-container c"><span>{$scrollableYPosition}</span></div>
 	<div class="slider-page-container d"><span>{$scrollableYPosition}</span></div>
 	<div class="slider-page-container e"><span>{$scrollableYPosition}</span></div>
@@ -71,6 +74,7 @@
 	:global(body) {
 		margin: 0;
 	}
+
 	@media only screen and (min-width: 1000px) {
 		:global(body) {
 			overflow: hidden;
@@ -91,7 +95,7 @@
 		margin: 0;
 		height: 100vh;
 		width: 100%;
-		
+
 		span {
 			position: absolute;
 			z-index: 10;

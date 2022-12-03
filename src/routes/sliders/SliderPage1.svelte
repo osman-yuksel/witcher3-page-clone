@@ -1,8 +1,10 @@
 <script lang="ts">
+	import Compass from '../Compass.svelte';
 </script>
 
 <div class="slide-content">
 	<div class="content-container">
+		<Compass page={1} />
 		<div class="inner-wrapper">
 			<img
 				src="https://www.thewitcher.com/build/images/tw3-next-gen-logo-dark-en@2x-8dd9e900..png"
@@ -84,10 +86,7 @@
 			color: #fff;
 			filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.85)) drop-shadow(0 6px 28px rgba(0, 0, 0, 0.7));
 		}
-		h1,
-		h2,
-		h3,
-		h4 {
+		h1 {
 			font-style: normal;
 			font-weight: 700;
 		}
