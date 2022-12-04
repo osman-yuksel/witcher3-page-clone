@@ -1,3 +1,7 @@
+# Check out my progress so far
+Original Page by CD PROJECT RED: https://www.thewitcher.com/en/witcher3#home <br />
+My clone: https://witcher3-page-clone.vercel.app/
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
