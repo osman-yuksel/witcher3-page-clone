@@ -3,7 +3,7 @@
 </script>
 
 <div class="compass slide-{page}-compass" style="--page: {page}">
-	<img src="https://www.thewitcher.com/build/images/Compass-0c9152d4..svg" alt="Compass">
+	<img src="https://www.thewitcher.com/build/images/Compass-0c9152d4..svg" alt="Compass" />
 </div>
 
 <style lang="scss">
@@ -17,7 +17,7 @@
 		height: $size;
 		overflow: hidden;
 		transform: rotate(180deg);
-		img{
+		img {
 			position: relative;
 			width: 200%;
 			height: 200%;
@@ -25,20 +25,20 @@
 		}
 	}
 
-	.slide-1-compass{
+	.slide-1-compass {
 		mix-blend-mode: overlay;
-		opacity: .3;
+		opacity: 0.3;
 	}
-	.slide-2-compass{
+	.slide-2-compass {
 		mix-blend-mode: color-burn;
 		opacity: 1;
 	}
 
-	.slide-3-compass{
+	.slide-3-compass {
 		mix-blend-mode: color-burn;
 		opacity: 1;
 	}
-	.slide-4-compass{
+	.slide-4-compass {
 		mix-blend-mode: color-burn;
 		opacity: 1;
 	}
