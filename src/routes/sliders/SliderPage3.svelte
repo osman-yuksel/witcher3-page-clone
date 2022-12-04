@@ -1,52 +1,54 @@
 <script lang="ts">
 	import Compass from '../Compass.svelte';
 	export let pageCount: number;
-	$: active = pageCount === 1 ? true : false;
+	$: active = pageCount === 2 ? true : false;
 </script>
 
 <div class="slide-content">
 	<div class="content-container">
 		<div class="compass-container">
-			<Compass page={2} />
+			<Compass page={3} />
 		</div>
 		<div class="inner-wrapper">
 			<div class="context {active ? 'active-slide' : 'inactive-slide'}">
-				<h2 class="title">Story</h2>
+				<h2 class="title">Open World</h2>
 				<p class="text">
-					In a war-torn world, with the Wild Hunt on your back, you'll take on your most important
-					contract -- to track down the child of prophecy, a key and a weapon which can save or
-					destroy all.
+					In the open world of Wild Hunt, you chart your own path to adventure. You play as a bounty
+					hunter, a man of the road. You set your own goals and choose your own destinations. Go
+					after the bounty on the head of a nasty monster pestering a village or help a scheming
+					prince who needs a dirty job done -- no matter what style of epic questing you crave, The
+					Witcher will provide it.
 				</p>
 				<p />
 			</div>
 			<div class="tiles {active ? 'active-slide' : 'inactive-slide'}">
 				<div class="tile">
 					<img
-						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/story-child-1.jpg"
-						alt="Child Of Prophecy"
+						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/openworld-exploration-1.jpg"
+						alt="Exploration"
 					/>
-					<h3>Child Of Prophecy</h3>
+					<h3>Exploration</h3>
 				</div>
 				<div class="tile">
 					<img
-						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/story-romance-1.jpg"
-						alt="Romance"
+						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/openworld-places-1.jpg"
+						alt="Regions"
 					/>
-					<h3>Romance</h3>
+					<h3>Regions</h3>
 				</div>
 				<div class="tile">
 					<img
-						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/story-plague-1.jpg"
-						alt="Plague Of The Wild Hunt"
+						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/openworld-inhabitants-1.jpg"
+						alt="Inhabitants"
 					/>
-					<h3>Plague Of The Wild Hunt</h3>
+					<h3>Inhabitants</h3>
 				</div>
 				<div class="tile">
 					<img
-						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/story-choice-1.jpg"
-						alt="Choice And Consequence"
+						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/openworld-activities-1.jpg"
+						alt="Activities"
 					/>
-					<h3>Choice And Consequence</h3>
+					<h3>Activities</h3>
 				</div>
 			</div>
 		</div>
@@ -61,8 +63,7 @@
 	.compass-container {
 		z-index: 2;
 	}
-
-	.compass-container::after {
+	.content-container::after {
 		content: '';
 		box-sizing: border-box;
 		position: absolute;
@@ -78,7 +79,7 @@
 	}
 	.content-container {
 		height: 100vw;
-		background-image: url('https://www.thewitcher.com/build/images/bg-story-81ca63b7..jpg');
+		background-image: url('https://www.thewitcher.com/build/images/bg-openworld-7ab028a0..jpg');
 		height: 100vh;
 		position: relative;
 		background-repeat: no-repeat;
@@ -100,8 +101,7 @@
 					font-size: 48px;
 					line-height: 56px;
 					margin: 0 0 17px;
-					color: #fff;
-					text-shadow: 0 2px 24px rgba(0, 0, 0, 0.6);
+					color: rgb(0, 0, 0);
 				}
 				p {
 					opacity: inherit;
@@ -110,8 +110,7 @@
 					font-size: 16px;
 					line-height: 28px;
 					margin: 0;
-					color: rgb(255, 255, 255);
-					text-shadow: 0 2px 24px rgba(0, 0, 0, 0.6);
+					color: rgb(0, 0, 0);
 				}
 			}
 			.tiles {

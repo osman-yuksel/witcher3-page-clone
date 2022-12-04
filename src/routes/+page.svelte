@@ -7,6 +7,8 @@
 	//Slider Pages
 	import SliderPage1 from './sliders/SliderPage1.svelte';
 	import SliderPage2 from './sliders/SliderPage2.svelte';
+	import SliderPage3 from './sliders/SliderPage3.svelte';
+	import SliderPage4 from './sliders/SliderPage4.svelte';
 
 	//Slider logic
 	let pageCount = 0;
@@ -61,10 +63,16 @@
 	</div>
 	<div class="slider-page-container">
 		<span>{$scrollableYPosition}</span>
-		<SliderPage2 {pageCount}/>
+		<SliderPage2 {pageCount} />
 	</div>
-	<div class="slider-page-container c"><span>{$scrollableYPosition}</span></div>
-	<div class="slider-page-container d"><span>{$scrollableYPosition}</span></div>
+	<div class="slider-page-container ">
+		<span>{$scrollableYPosition}</span>
+		<SliderPage3 {pageCount} />
+	</div>
+	<div class="slider-page-container d">
+		<span>{$scrollableYPosition}</span>
+		<SliderPage4 {pageCount} />
+	</div>
 	<div class="slider-page-container e"><span>{$scrollableYPosition}</span></div>
 	<div class="slider-page-container f"><span>{$scrollableYPosition}</span></div>
 	<div class="slider-page-container g"><span>{$scrollableYPosition}</span></div>
@@ -101,8 +109,6 @@
 			z-index: 10;
 		}
 	}
-
-	.c,
 	.e,
 	.g {
 		background-color: red;

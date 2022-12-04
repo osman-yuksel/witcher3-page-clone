@@ -1,52 +1,53 @@
 <script lang="ts">
 	import Compass from '../Compass.svelte';
 	export let pageCount: number;
-	$: active = pageCount === 1 ? true : false;
+	$: active = pageCount === 3 ? true : false;
 </script>
 
 <div class="slide-content">
 	<div class="content-container">
 		<div class="compass-container">
-			<Compass page={2} />
+			<Compass page={4} />
 		</div>
 		<div class="inner-wrapper">
 			<div class="context {active ? 'active-slide' : 'inactive-slide'}">
-				<h2 class="title">Story</h2>
+				<h2 class="title">Professional Monster Hunter</h2>
 				<p class="text">
-					In a war-torn world, with the Wild Hunt on your back, you'll take on your most important
-					contract -- to track down the child of prophecy, a key and a weapon which can save or
-					destroy all.
+					Witchers are mutants, men subjected to gruelling training and flesh-altering experiments
+					that prepare them for one purpose: to kill monsters. Geralt was forged at the elite School
+					of the Wolf and is considered one of the deadliest witchers ever trained. He possesses
+					superhuman reflexes and strength, and his sword fighting skills are second to none.
 				</p>
 				<p />
 			</div>
 			<div class="tiles {active ? 'active-slide' : 'inactive-slide'}">
 				<div class="tile">
 					<img
-						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/story-child-1.jpg"
-						alt="Child Of Prophecy"
+						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/monsterhunter-mutations-1.jpg"
+						alt="Mutations And Skills"
 					/>
-					<h3>Child Of Prophecy</h3>
+					<h3>Mutations And Skills</h3>
 				</div>
 				<div class="tile">
 					<img
-						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/story-romance-1.jpg"
-						alt="Romance"
+						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/monsterhunter-hunts-1.jpg"
+						alt="Monster Hunts"
 					/>
-					<h3>Romance</h3>
+					<h3>Monster Hunts</h3>
 				</div>
 				<div class="tile">
 					<img
-						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/story-plague-1.jpg"
-						alt="Plague Of The Wild Hunt"
+						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/monsterhunter-equipment-1.jpg"
+						alt="Equipment"
 					/>
-					<h3>Plague Of The Wild Hunt</h3>
+					<h3>Equipment</h3>
 				</div>
 				<div class="tile">
 					<img
-						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/story-choice-1.jpg"
-						alt="Choice And Consequence"
+						src="https://cdn-s-thewitcher.cdprojektred.com/witcher3/tiles/monsterhunter-allies-1.jpg"
+						alt="Allies And Enemies"
 					/>
-					<h3>Choice And Consequence</h3>
+					<h3>Allies And Enemies</h3>
 				</div>
 			</div>
 		</div>
@@ -61,24 +62,9 @@
 	.compass-container {
 		z-index: 2;
 	}
-
-	.compass-container::after {
-		content: '';
-		box-sizing: border-box;
-		position: absolute;
-		left: 8px;
-		right: 8px;
-		top: 8px;
-		bottom: 8px;
-		mix-blend-mode: color-burn;
-		opacity: 0.15;
-		border: 1px solid #113950;
-		z-index: 2;
-		pointer-events: none;
-	}
 	.content-container {
 		height: 100vw;
-		background-image: url('https://www.thewitcher.com/build/images/bg-story-81ca63b7..jpg');
+		background-image: url('https://www.thewitcher.com/build/images/bg-monsterhunter-4605a7ed..jpg');
 		height: 100vh;
 		position: relative;
 		background-repeat: no-repeat;

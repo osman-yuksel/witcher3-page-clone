@@ -4,7 +4,7 @@
 		'https://www.thewitcher.com/build/images/tw3-next-gen-logo-light-en@1x-4939ae7e..png',
 		'https://www.thewitcher.com/build/images/tw3-next-gen-logo-light-en@1x-4939ae7e..png',
 		'https://www.thewitcher.com/build/images/tw3-next-gen-logo-dark-en@2x-8dd9e900..png',
-		'https://www.thewitcher.com/build/images/tw3-next-gen-logo-dark-en@2x-8dd9e900..png',
+		'https://www.thewitcher.com/build/images/tw3-next-gen-logo-light-en@1x-4939ae7e..png',
 		'https://www.thewitcher.com/build/images/tw3-next-gen-logo-dark-en@2x-8dd9e900..png',
 		'https://www.thewitcher.com/build/images/tw3-next-gen-logo-dark-en@2x-8dd9e900..png',
 		'https://www.thewitcher.com/build/images/tw3-next-gen-logo-dark-en@2x-8dd9e900..png',

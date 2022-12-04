@@ -21,7 +21,7 @@
 			position: relative;
 			width: 200%;
 			height: 200%;
-			rotate: (calc(180deg + var(--page) * 100deg));
+			rotate: (180deg);
 		}
 	}
 
@@ -30,6 +30,15 @@
 		opacity: .3;
 	}
 	.slide-2-compass{
+		mix-blend-mode: color-burn;
+		opacity: 1;
+	}
+
+	.slide-3-compass{
+		mix-blend-mode: color-burn;
+		opacity: 1;
+	}
+	.slide-4-compass{
 		mix-blend-mode: color-burn;
 		opacity: 1;
 	}
