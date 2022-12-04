@@ -62,6 +62,20 @@
 	.compass-container {
 		z-index: 2;
 	}
+	.content-container::after {
+		content: '';
+		box-sizing: border-box;
+		position: absolute;
+		left: 8px;
+		right: 8px;
+		top: 8px;
+		bottom: 8px;
+		mix-blend-mode: color-burn;
+		opacity: 0.15;
+		border: 1px solid #113950;
+		z-index: 2;
+		pointer-events: none;
+	}
 	.content-container {
 		height: 100vw;
 		background-image: url('https://www.thewitcher.com/build/images/bg-monsterhunter-4605a7ed..jpg');
