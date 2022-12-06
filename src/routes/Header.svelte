@@ -7,7 +7,7 @@
 		'navbar-white',
 		'navbar-black',
 		'navbar-white',
-		'navbar-white',
+		'navbar-black',
 		'navbar-white',
 		'navbar-white'
 	];

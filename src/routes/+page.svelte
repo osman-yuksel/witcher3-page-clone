@@ -9,6 +9,7 @@
 	import SliderPage2 from './sliders/SliderPage2.svelte';
 	import SliderPage3 from './sliders/SliderPage3.svelte';
 	import SliderPage4 from './sliders/SliderPage4.svelte';
+	import SliderPage5 from './sliders/SliderPage5.svelte';
 
 	//Slider logic
 	let pageCount = 0;
@@ -69,11 +70,14 @@
 		<span>{$scrollableYPosition}</span>
 		<SliderPage3 {pageCount} />
 	</div>
-	<div class="slider-page-container d">
+	<div class="slider-page-container">
 		<span>{$scrollableYPosition}</span>
 		<SliderPage4 {pageCount} />
 	</div>
-	<div class="slider-page-container e"><span>{$scrollableYPosition}</span></div>
+	<div class="slider-page-container">
+		<span>{$scrollableYPosition}</span>
+		<SliderPage5 {pageCount} />
+	</div>
 	<div class="slider-page-container f"><span>{$scrollableYPosition}</span></div>
 	<div class="slider-page-container g"><span>{$scrollableYPosition}</span></div>
 </main>
@@ -97,6 +101,9 @@
 		flex-direction: column;
 		transition-property: transform;
 		box-sizing: content-box;
+		background-image: url('https://www.thewitcher.com/build/images/background-19d968e4..webp');
+		background-size: 100vw 100vh;
+		background-position: bottom;
 	}
 
 	.slider-page-container {
@@ -109,7 +116,6 @@
 			z-index: 10;
 		}
 	}
-	.e,
 	.g {
 		background-color: red;
 	}
