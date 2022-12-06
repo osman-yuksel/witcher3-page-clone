@@ -18,6 +18,7 @@
 
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
+	import GlobalCompass from './sliders/GlobalCompass.svelte';
 
 	const scrollableYPosition = tweened(0, {
 		duration: 400,
@@ -52,6 +53,7 @@
 
 <Header {pageCount} />
 <Witcher3Logo {pageCount} />
+<GlobalCompass page={pageCount} />
 
 <main
 	class="container"
@@ -78,8 +80,8 @@
 		<span>{$scrollableYPosition}</span>
 		<SliderPage5 {pageCount} />
 	</div>
-	<div class="slider-page-container f"><span>{$scrollableYPosition}</span></div>
-	<div class="slider-page-container g"><span>{$scrollableYPosition}</span></div>
+	<div class="slider-page-container"><span>{$scrollableYPosition}</span></div>
+	<div class="slider-page-container"><span>{$scrollableYPosition}</span></div>
 </main>
 
 <style lang="scss">
@@ -90,6 +92,9 @@
 	@media only screen and (min-width: 1000px) {
 		:global(body) {
 			overflow: hidden;
+			background-image: url('https://www.thewitcher.com/build/images/background-19d968e4..webp');
+			background-size: 100vw 100vh;
+			background-position: bottom;
 		}
 	}
 	.container {
@@ -101,9 +106,6 @@
 		flex-direction: column;
 		transition-property: transform;
 		box-sizing: content-box;
-		background-image: url('https://www.thewitcher.com/build/images/background-19d968e4..webp');
-		background-size: 100vw 100vh;
-		background-position: bottom;
 	}
 
 	.slider-page-container {
@@ -115,8 +117,5 @@
 			position: absolute;
 			z-index: 10;
 		}
-	}
-	.g {
-		background-color: red;
 	}
 </style>
